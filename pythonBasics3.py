@@ -11,6 +11,7 @@ import re
 # Define a function starts_with_number(s) that takes a string and returns true
 # if it starts with a number and false otherwise.
 # (For our purposes, a number is any character that is 0,1,2,3,4,5,6,7,8, or 9.)
+# Note: Be sure to use RegEx!
 def starts_with_number(s):
   # YOUR CODE HERE
 
