@@ -28,6 +28,8 @@ class TestPythonBasicsOne(unittest.TestCase):
 
         self.assertEqual(pythonBasics3.multiple_words("It's-all-one-word"), False)
 
+        self.assertEqual(pythonBasics3.multiple_words(" one-sided? "), False)
+
         # Please add three more test cases following the order above
 
 

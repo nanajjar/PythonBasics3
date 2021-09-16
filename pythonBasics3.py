@@ -21,8 +21,8 @@ def starts_with_non_number(s):
 # Define a function multiple_words(s) that takes a string and returns true
 # if it contains multiple words and false otherwise.
 # (For our purposes, a string has multiple words if it contains any whitespace characters.)
-# Note: Be sure to use RegEx and it works for any whitespace character 
-# and there's at least one character on either side!
+# Note: Be sure to use RegEx and that it works for any whitespace character 
+# with at least one character on either side!
 def multiple_words(s):
   # YOUR CODE HERE
 
