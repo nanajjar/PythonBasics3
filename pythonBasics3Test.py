@@ -1,47 +1,55 @@
-
 import unittest
 import pythonBasics3
 
 
 class TestPythonBasicsOne(unittest.TestCase):
 
-#Test case for ends_with_consonant
-    def test_ends_with_consonant(self):
+#Test case for starts_with_non_number
+    def test_starts_with_non_number(self):
 
-        self.assertEqual(pythonBasics3.ends_with_consonant("Once upon a dark, cold night"), True)
+        self.assertEqual(pythonBasics3.starts_with_non_number("Once upon a time, I was 18"), True)
 
-        self.assertEqual(pythonBasics3.ends_with_consonant("What did Steve just say"), True)
+        self.assertEqual(pythonBasics3.starts_with_non_number("5 weekdays each week"), False)
 
-        self.assertEqual(pythonBasics3.ends_with_consonant("I once swam with sharks"), True)
+        self.assertEqual(pythonBasics3.starts_with_non_number("-5 is what I got on my quiz"), True)
 
-        self.assertEqual(pythonBasics3.ends_with_consonant("Do I know how old you are you"), False)
-
-        # Please add three more test cases following the order above
-
-#Test case for ends_with_number
-    def test_ends_with_number(self):
-
-        self.assertEqual(pythonBasics3.ends_with_number("What is 3/10"), True)
-
-        self.assertEqual(pythonBasics3.ends_with_number("It was not a cat"), False)
-
-        self.assertEqual(pythonBasics3.ends_with_number("I once swam with sharks"), False)
-
-        self.assertEqual(pythonBasics3.ends_with_number("Blue plus purple equals 5"), True)
+        self.assertEqual(pythonBasics3.starts_with_non_number(" 1 more meal left in the fridge"), True)
 
         # Please add three more test cases following the order above
 
+#Test case for multiple_words
+    def test_multiple_words(self):
 
-#Test case for binary_multiple_of_6
-    def test_binary_multiple_of_6(self):
+        self.assertEqual(pythonBasics3.multiple_words("That's 10/10"), True)
 
-        self.assertEqual(pythonBasics3.binary_multiple_of_6("100101"), False)
+        self.assertEqual(pythonBasics3.multiple_words(" "), False)
 
-        self.assertEqual(pythonBasics3.binary_multiple_of_6("110"), True)
+        self.assertEqual(pythonBasics3.multiple_words("Different\twhitespace"), False)
 
-        self.assertEqual(pythonBasics3.binary_multiple_of_6("111111"), False)
+        self.assertEqual(pythonBasics3.multiple_words("It's-all-one-word"), False)
 
-        self.assertEqual(pythonBasics3.binary_multiple_of_6("3"), False)
+        self.assertEqual(pythonBasics3.multiple_words(" one-sided? "), False)
+
+        # Please add three more test cases following the order above
+
+
+#Test case for reserved_us_tld
+    def test_reserved_us_tld(self):
+
+        self.assertEqual(pythonBasics3.reserved_us_tld("http://www.whitehouse.gov"), False)
+
+        self.assertEqual(pythonBasics3.reserved_us_tld("https://www.charlotte.edu"), True)
+
+        self.assertEqual(pythonBasics3.reserved_us_tld("https://uncc.instructure.com"), False)
+
+        self.assertEqual(pythonBasics3.reserved_us_tld("https://www.education.com"), False)
+
+        self.assertEqual(pythonBasics3.reserved_us_tld("https://www.norad.mil"), True)
+
+        self.assertEqual(pythonBasics3.reserved_us_tld("https://www.congress.gov"), True)
+
+        # This does match the description (https and .edu) but it includes extra stuff. Feel free to implement this functionality.
+        self.assertEqual(pythonBasics3.reserved_us_tld("https://selfservice.uncc.edu/pls/BANPROD/twbkwbis.P_GenMenu?name=homepage"), False)
 
 
 
